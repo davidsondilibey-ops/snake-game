@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <div class="hud">
+        <div>
+          <span class="label">Score</span>
+          <span id="score">0</span>
+        </div>
+        <div>
+          <span class="label">Best</span>
+          <span id="best-score">0</span>
+        </div>
+      </div>
+
+      <canvas id="game" width="400" height="400" aria-label="Snake game board"></canvas>
+
+      <div class="controls">
+        <div class="button-row">
+          <button id="start-btn" type="button">Start Game</button>
+          <button id="settings-btn" class="secondary-btn" type="button" aria-expanded="false" aria-controls="settings-panel">
+            Settings
+          </button>
+        </div>
+        <section id="settings-panel" class="settings-panel" aria-label="Game settings" hidden>
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+          <label class="toggle-setting" for="wrap-mode">
+            <input id="wrap-mode" type="checkbox" checked />
+            Wrap through walls
+          </label>
+        </section>
+        <p id="status">Press Start or hit Space to begin</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
